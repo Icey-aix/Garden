@@ -1,0 +1,126 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-image: url('bg.png'); /* This is the background we drew. */
+  background-color: #f0f8ff; /* If the background of the item is not displayed, it will show up as white. */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+#control-panel {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start; /* Align the top of the toolbar with the top of the drawing board area. */
+  z-index: 100;
+}
+
+/* Template switch button */
+.template-btn {
+  align-self: center; /* Center the button vertically within the drawing board (300px high) */
+  font-size: 24px;
+  font-weight: bold;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  /* The line-height and height are similar, which enables the text to be vertically centered. */
+  line-height: 38px;
+  text-align: center;
+  user-select: none;
+  margin-top: 30px; /* It would look better if it were positioned a little lower. */
+}
+.template-btn:hover {
+  background: #e0e0e0;/* The feedback effect when the mouse hovers. */
+}
+
+/* Apart from the drawing board, all the things on the right */
+#drawing-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px; /* Space between name and drawing board */
+}
+
+/* Name display above the drawing board */
+#user-name-display {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  height: 20px; /* Give it a fixed height Get used to each screen */
+}
+
+#drawing-board {
+  width: 300px;
+  height: 300px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Toolbar */
+#toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 150px;
+  
+  /* Set the height to match the #drawing-area on the left (300px canvas + 20px for the name + 5px for the gap)*/
+  height: 325px; 
+ /* Make sure that the padding and border are included within the total height of 325px. */
+  box-sizing: border-box; 
+  justify-content: center;
+
+}
+#toolbar label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+#toolbar input[type="color"] {
+  width: 100%;
+  height: 40px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+#toolbar input[type="range"] {
+  width: 100%;
+  cursor: pointer;
+}
+#submit-btn {
+  background-color: #76ba79;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  /* A smooth transition effect for :hover. */
+  transition: background-color 0.3s;
+  
+}
+#submit-btn:hover {
+ /* When the mouse hovers, it becomes darker to provide feedback. */
+  background-color: #45a049;
+}

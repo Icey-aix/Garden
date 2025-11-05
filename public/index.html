@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🍄 FUNGI GARDEN</title>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <div id="control-panel">
+
+    <button id="prev-template-btn" class="template-btn">&lt;</button>
+    
+    <div id="drawing-area">
+      <p id="user-name-display"></p>
+      
+      <div id="drawing-board"></div>
+    </div>
+
+    <button id="next-template-btn" class="template-btn">&gt;</button>
+    
+  <div id="toolbar">
+       
+      <div class="tool-group">
+        <label for="brush-color">Color</label>
+        <input type="color" id="brush-color" value="#FF0000">
+      </div>
+      
+      <div class="tool-group">
+        <label for="brush-size">Pixel Size (5-30)</label>
+        <input type="range" id="brush-size" min="5" max="30" value="10">
+      </div>
+      
+      <button id="submit-btn">🍄 种下蘑菇</button>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
