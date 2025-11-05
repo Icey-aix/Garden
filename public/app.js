@@ -1,5 +1,5 @@
 // ask for name when page loads
-let userName = prompt("Your name:", "Mushroom");
+let userName = prompt("Please give your mushroom a name name:", "Mushroom");
 if (!userName) userName = "Mushroom";
 
 // show name on top of board
